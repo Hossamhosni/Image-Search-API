@@ -1,0 +1,19 @@
+body {
+	margin: 10px;
+	padding: 20px;
+	font-family: "Calibri", serif;
+	background-color:#333333;
+	color:white;
+}
+h1 {
+	text-align:center;
+}
+code {
+	font-family: Consolas, monospace;
+	color: #ee5233;
+	background-color: #F9E8D4;
+}
+
+footer {
+	text-align:center;
+}

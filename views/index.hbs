@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="/stylesheets/style.css" rel="stylesheet" type="text/css"></link>
+		<title>Url Shortner Basejump</title>
+	</head>
+	<body>
+		<h1>Free Code Camp API Basejump: Image Abstraction Layer</h1>
+		<h2>User Stories</h2>
+		<ul>
+			<li>User can enter a search query and results will be returned in JSON format</li>
+			<li>User can also specify the number of results by adding the offset=&lt;num&gt;</li>
+			<li>User can view the latest search queries using <code>{{mainUrl}}/recent</code></li>
+		</ul>
+		<h3>Example Input:</h3>
+		<code>
+			{{mainUrl}}/search/?q=mad%20max&amp;offset=2
+		</code>
+		<br /><br />
+		<h3>Example output:</h3>
+		<code>
+			[
+				{<br />
+					url: "https://i.ytimg.com/vi/hEJnMQG9ev8/maxresdefault.jpg",<br />
+					snippet: "Mad Max: Fury Road - Official Main Trailer [HD] - YouTube",<br />
+					thumbnailLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzxZbsfM7DHBxyw4jWvlpjAp_Tz-SR26i-_VxFrDvJDli-AGjYMKgTRZsc",<br />
+					contextLink: "https://www.youtube.com/watch?v=hEJnMQG9ev8"<br />
+				},
+				<br />
+				{<br />
+					url: "http://www.madmaxmovies.com/mad-max-fury-road/soundtrack/mad-max-fury-road-soundtrack.jpg",<br />
+					snippet: "Mad Max - The Road Warrior - Fury Road",<br />
+					thumbnailLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIaiDGPRABrSkEXvIqNNN3rOCBWg5V_Sy9Tezl7Qw-1Vhs3bUsCA2pfF1p6g",<br />
+					contextLink: "http://www.madmaxmovies.com/"<br />
+				}
+			]
+		</code>
+		<footer>
+			Created by Hossam Hosny
+		</footer>
+	</body>
+</html>
