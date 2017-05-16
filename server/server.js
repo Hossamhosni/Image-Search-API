@@ -37,6 +37,7 @@ app.get('/search/?*', (req, res) => {
 	var query = req.query.q;
 	var offset = req.query.offset;
 	if (!offset || offset > 10) offset = 10;
+  // make the call to google apis
 	var url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${query}&searchType=image&fields=items(snippet,image(thumbnailLink,contextLink),link)&num=${offset}`;
 	request({
     url,
@@ -58,11 +59,12 @@ app.get('/search/?*', (req, res) => {
 				query,
 				date: new Date().toJSON().slice(0,10).replace(/-/g,'/')
 			});
+      // if the number of docs
 			Query.find({}).then((docs) => {
 				if (docs.length > 5) {
 					var _id = docs[0]._id.toHexString();
 					Query.findByIdAndRemove(_id).then((result) => {
-						
+
 					});
 				}
 			});
