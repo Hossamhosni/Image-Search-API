@@ -61,7 +61,7 @@ app.get('/search/?*', (req, res) => {
 			});
       // if the number of docs
 			Query.find({}).then((docs) => {
-				if (docs.length > 5) {
+				if (docs.length > 8) {
 					var _id = docs[0]._id.toHexString();
 					Query.findByIdAndRemove(_id).then((result) => {
 
